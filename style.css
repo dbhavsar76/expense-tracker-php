@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.header {
+  margin: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width:40%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.right {
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+h3 {
+  border-bottom: medium solid #bbb;
+  padding: 10px;
+  text-align: center;
+}
+
+h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.left > div,
+.right > div {
+  margin: 5px 20px;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+.left h1 {
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.left .balance {
+  padding: 20px !important;
+}
+
+.inc-exp-container {
+  padding: 20px;
+  display: flex;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+.add-update-form > form {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="date"],
+input[type="text"],
+input[type="number"] {
+  border: none;
+  border-bottom: 1px solid #dedede;
+  font-size: 18px;
+  padding: 2px;
+  margin: 10px;
+  outline: none;
+}
+
+input[type="date"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-bottom: medium solid slategray;
+  outline: none;
+}
+
+input[type="radio"] {
+  margin-left: 15px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.add-update {
+  width: 50%;
+  align-self: center;
+}
+
+.edit {
+  background-color: #3767ae;
+}
+
+.delete {
+  background-color: #e74c3c;
+  margin-left:2px;
+}
+
+.search {
+  flex-basis: 25%;
+  margin: 10px;
+}
+
+.btn:focus,
+.edit:focus,
+.delete:focus {
+  outline: 0;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+}
+
+.transactions > form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.transactions form div {
+  width: 100%;
+}
+
+.transactions form div:first-of-type {
+  display: flex;
+}
+
+.transactions form div:last-of-type {
+  padding-left: 10px;
+}
+
+.transactions form input[type="text"]{
+  flex-basis: 70%;
+}
+
+.list {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  height: 365px;
+  overflow-y: scroll;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+  padding: 10px;
+  margin: 5px 10px;
+  display: flex;
+  font-size: 18px;
+}
+
+.list li span {
+  flex:2;
+  text-align: center;
+}
+
+.list li span:first-of-type {
+  text-align: left;
+}
+
+.list li span:last-of-type {
+  flex:1;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.list > form {
+  margin:0;
+}
